@@ -1,0 +1,6 @@
+
+docker run --name docker-postgres -e POSTGRES_PASSWORD=123 -d -p 5433:5432 -v //d/docker_shared/postgres/data:/var/lib/postgresql/data postgres
+
+
+docker run --name docker-postgres -e POSTGRES_PASSWORD=123 -d -p 5433:5432 postgres
+docker start docker-postgres
