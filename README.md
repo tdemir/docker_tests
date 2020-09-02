@@ -1,2 +1,2 @@
 # docker_tests
-# docker ile ilgili testleri barındırıyor
+docker ile ilgili testleri barındırıyor
