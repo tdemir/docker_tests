@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    docker-nodejs:
+        container_name: docker-nodejs
+        image: node:8.16.1-jessie
+        ports:
+            - "9991:8080"            
+        entrypoint: ["/bin/bash", "/src/app_start.sh", "-d", "--no-deps"]
+        volumes:
+            - //d/docker/nodejs/shared:/src 
+        restart: always
