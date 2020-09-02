@@ -1,0 +1,1 @@
+docker exec -it rabbitmq_rabbitmq_1 /bin/bash

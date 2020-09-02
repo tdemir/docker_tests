@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  rabbitmq:
+        image: "rabbitmq:3-management"
+        hostname: "my-rabbit"
+        ports:
+          - "15673:15672"
+          - "5673:5672"
+          - "1883:1883"
+        labels:
+          NAME: "myrabbit"
+        volumes:
+          - //d/docker/rabbitmq/shared/rabbitmq-isolated.conf:/etc/rabbitmq/rabbitmq.config
+          - //d/docker/rabbitmq/shared/enabled_plugins:/etc/rabbitmq/enabled_plugins
+          - //d/docker/rabbitmq/shared:/src
+        restart: always
+
